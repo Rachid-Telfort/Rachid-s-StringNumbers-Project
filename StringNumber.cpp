@@ -1101,7 +1101,6 @@ const StringNumber StringNumber::operator<<(const StringNumber& secondArgument) 
     if(*secondArgument.operand.begin()!='-')
     {
         std::string binaryString=this->toBinary();
-        unsigned char originalSignBit=*binaryString.begin();
 
         for(StringNumber bitShiftCount; bitShiftCount<secondArgument; ++bitShiftCount)
         {
@@ -1115,9 +1114,9 @@ const StringNumber StringNumber::operator<<(const StringNumber& secondArgument) 
             binaryStringNumberBase*=StringNumber(2);
         }
 
-        if(originalSignBit=='1')///You have a negative decimal number as the bitwise left shift since the original sign bit before shifting is 1.
+        if(*binaryString.begin()=='1')///You have a negative decimal number as the bitwise left shift since the sign bit after shifting is 1.
         {
-            bitwiseLeftShift-=binaryStringNumberBase;///You do this because you need to do the actual unsigned bit representation - 2^(number of bits) to represent the negative bitwise left shift due to the original sign bit. If one implements an unsigned String Number, this step would not be needed.
+            bitwiseLeftShift-=binaryStringNumberBase;///You do this because you need to do the actual unsigned bit representation - 2^(number of bits) to represent the negative bitwise left shift due to the sign bit. If one implements an unsigned String Number, this step would not be needed.
         }
     }
 

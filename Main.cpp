@@ -168,7 +168,7 @@ int main()
 
     std::cout<<"Before shifting left 7 bits the sample is "<<ninthSample<<std::endl;
     std::cout<<"After shifting left 7 bits the sample is "<<(ninthSample<<=StringNumber(7))<<std::endl;
-    if(ninthSample==StringNumber(128))
+    if(ninthSample==StringNumber(-128))
     {
         std::cout<<"Bitwise left shift test passed!"<<"\n"<<std::endl;
     }
