@@ -1665,6 +1665,11 @@ const std::pair<const StringNumber, const StringNumber> nthRoot(const StringNumb
         return std::pair<const StringNumber, const StringNumber>(firstArgument, firstArgument);
     }
 
+    else if(firstArgument==StringNumber()||firstArgument==StringNumber(1))
+    {
+        return std::pair<const StringNumber, const StringNumber>(firstArgument, firstArgument);
+    }
+
     bool isNegativeRoot=false;
     bool isNegativeRootBase=false;
     long long int copySecondArgument=0;
@@ -1753,6 +1758,11 @@ const std::pair<const StringNumber, const StringNumber> nthRoot(const StringNumb
         return std::pair<const StringNumber, const StringNumber>(firstArgument, firstArgument);
     }
 
+    else if(firstArgument==StringNumber()||firstArgument==StringNumber(1))
+    {
+        return std::pair<const StringNumber, const StringNumber>(firstArgument, firstArgument);
+    }
+
     bool isNegativeRoot=false;
     bool isNegativeRootBase=false;
     StringNumber copyFirstArgument;
@@ -1835,6 +1845,11 @@ const std::pair<const StringNumber, const StringNumber> nthRoot(const StringNumb
         return std::pair<const StringNumber, const StringNumber>(firstArgument, firstArgument);
     }
 
+    else if(firstArgument==StringNumber()||firstArgument==StringNumber(1))
+    {
+        return std::pair<const StringNumber, const StringNumber>(firstArgument, firstArgument);
+    }
+
     bool isNegativeRoot=false;
     bool isNegativeRootBase=false;
     StringNumber copyFirstArgument;
@@ -1913,6 +1928,11 @@ const std::pair<const StringNumber, const StringNumber> nthRoot(const StringNumb
     }
 
     else if(secondArgumentStringNumber==StringNumber(1))
+    {
+        return std::pair<const StringNumber, const StringNumber>(firstArgument, firstArgument);
+    }
+
+    else if(firstArgument==StringNumber()||firstArgument==StringNumber(1))
     {
         return std::pair<const StringNumber, const StringNumber>(firstArgument, firstArgument);
     }
